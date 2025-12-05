@@ -1,7 +1,0 @@
-{
-  "name": "GLDnSteed Studios",
-  "description": "A professional-grade, browser-based video editing suite featuring a high-performance canvas renderer, multi-track timeline, and real-time preview.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
-}

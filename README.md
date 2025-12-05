@@ -1,198 +1,195 @@
-# The Sacred Empire
+# Steed Video Editor
 
-> A 1920s Prohibition-era multiplayer browser game where players build criminal empires through strategic crime, crew cooperation, and territorial control.
+> A professional-grade browser-based video editing studio powered by React and TypeScript
 
-## 🎭 Game Overview
+## 🎬 Overview
 
-**Time Period:** 1920s-1933 (Prohibition Era)
-**Genre:** Multiplayer Crime/Strategy/RPG
-**Platform:** Browser-based (with future mobile expansion)
-**Core Theme:** Building criminal empire through solo and organized crime activities
+Steed is a comprehensive video editing application that brings professional editing capabilities to the browser. Built with modern web technologies, it offers a rich set of features for video creation, audio mixing, effects, and AI-powered tools.
 
-## 🎯 Project Status
+## ✨ Key Features
 
-**Current Phase:** Documentation & Planning
-**Development Stage:** Pre-Alpha
-**Target MVP Launch:** 6 months from development start
+### Video Editing
+- **Timeline Editor** - Multi-track timeline with drag-and-drop support
+- **Video Stage** - Real-time preview with playback controls
+- **Trimming & Splitting** - Precise clip manipulation
+- **Keyframe Animation** - Advanced motion graphics and effects
+- **Transitions** - Smooth transitions between clips
+- **Color Grading** - Professional color correction tools
 
-## 📚 Documentation
+### Audio Production
+- **Audio Mixer** - Multi-channel audio mixing
+- **Waveform Visualization** - Visual audio editing
+- **Audio Effects** - Comprehensive effects library
+- **Audio Ducking** - Automatic background music adjustment
+- **Audio Meter** - Real-time level monitoring
 
-- [Complete Game Design Document](docs/GAME_DESIGN.md) - Comprehensive feature analysis
-- [Technical Architecture](docs/TECHNICAL_ARCHITECTURE.md) - Backend systems and infrastructure
-- [MVP Roadmap](docs/MVP_ROADMAP.md) - Phased development plan
-- [Database Schema](docs/DATABASE_SCHEMA.md) - Data model design
-- [Monetization Strategy](docs/MONETIZATION.md) - Fair, non-P2W revenue model
-- [API Documentation](docs/API.md) - RESTful API endpoints
+### AI-Powered Tools
+- **Auto Transcription** - Automatic speech-to-text
+- **Video Analysis** - Intelligent scene detection
+- **Audio Analysis** - Smart audio enhancement
+- **AI Tools Panel** - Integrated AI assistance
 
-## 🎮 Core Features (MVP Phase 1)
+### Professional Features
+- **Export Queue** - Batch export management
+- **Project Management** - Organize multiple projects
+- **Template System** - Quick-start templates
+- **History & Undo** - Complete edit history
+- **Keyboard Shortcuts** - Professional workflow support
+- **Grid & Safe Zones** - Professional layout guides
 
-### Player Systems
-- User registration and authentication
-- Character profiles with statistics tracking
-- Rank-based progression system
-- Player messaging and communication
-
-### Crime Mechanics
-- **Solo Crimes:** Grand Theft Auto, Bootlegging, Rackets
-- **Multiplayer Crimes:** Cooperative criminal activities
-- **Organized Crimes:** Crew-based operations (24-hour cycle)
-
-### Social Systems
-- Crew (gang) creation and management
-- Crew-based organized crime activities
-- Forums and community features
-- Player-to-player interactions
-
-### Economic Systems
-- NPC marketplace for baseline economy
-- Currency earned through criminal activities
-- Basic property rental system
-- Equipment purchases (weapons, vehicles, armor)
-
-### Combat & Equipment
-- Tiered weapon system (Common → Legendary)
-- Period-authentic weaponry (Thompson SMG, BAR, etc.)
-- Armor and protection mechanics
-- Vehicle collection and progression
+### Asset Management
+- **Project Bins** - Organized asset storage
+- **Recent Assets** - Quick access to recent files
+- **Thumbnail Scrubber** - Visual navigation
+- **Search & Filter** - Find assets quickly
+- **Batch Operations** - Process multiple assets
 
 ## 🏗️ Project Structure
 
 ```
-steed/
-├── docs/                    # Comprehensive documentation
-├── backend/                 # Python/Django backend
-│   ├── api/                # RESTful API
-│   ├── core/               # Core game logic
-│   ├── models/             # Database models
-│   └── utils/              # Utility functions
-├── frontend/               # Browser-based UI
-│   ├── static/             # CSS, JS, images
-│   └── templates/          # HTML templates
-├── database/               # Schema and migrations
-├── tests/                  # Test suites
-└── scripts/                # Deployment and utility scripts
+Steed/
+├── frontend/               # React/TypeScript video editor
+│   ├── components/        # React components
+│   │   ├── Timeline.tsx
+│   │   ├── VideoStage.tsx
+│   │   ├── AudioMixer.tsx
+│   │   └── ...
+│   ├── utils/            # Utility functions
+│   │   ├── video-analysis.ts
+│   │   ├── audio-analysis.ts
+│   │   ├── export-queue.ts
+│   │   └── ...
+│   ├── hooks/            # Custom React hooks
+│   ├── types.ts          # TypeScript definitions
+│   └── App.tsx           # Main application
+├── archive/              # Previous project files
+└── README.md            # This file
 ```
-
-## 🚀 Development Roadmap
-
-### Phase 1: Core Loop (Months 1-6) - MVP
-- User authentication and profiles
-- Basic crime mechanics (3 types)
-- Simplified economy (NPC market)
-- Initial ranking system (5 ranks)
-- Messaging system
-
-### Phase 2: Social Layer (Months 7-12)
-- Crew creation and management
-- Multiplayer crimes
-- Forums and chat
-- Basic PvP mechanics
-- Property rental
-
-### Phase 3: Territory Wars (Year 2)
-- Property ownership
-- Territory control system
-- Crew vs. Crew combat
-- Casino properties
-
-### Phase 4: Platform Expansion (Year 3+)
-- Mobile applications
-- Advanced features
-- International territories
-- Competitive tournaments
-
-## 💰 Monetization Philosophy
-
-**Core Principle:** NEVER SELL POWER
-
-### ✅ Fair Monetization (Implemented)
-- **Cosmetics:** Avatar skins, vehicle paint jobs, crew emblems
-- **Convenience:** Extra storage slots, faster travel
-- **Social Features:** Custom chat colors, profile customization
-- **Battle Pass:** Seasonal progression with free/premium tracks
-
-### ❌ Rejected (Pay-to-Win)
-- ~~Direct combat advantages~~
-- ~~Higher crime payouts~~
-- ~~Exclusive powerful items~~
-
-## 🛡️ Player Protection Systems
-
-### New Player Protection
-- **7-Day Safe Harbor:** New players cannot be attacked
-- **Level-Based Matchmaking:** ±10 level attack range
-- **Tutorial System:** Graduated introduction to mechanics
-- **Crew Protection:** Social consequences for griefing
-
-### Anti-Cheat
-- Server-side validation
-- Rate limiting and anomaly detection
-- Player reporting tools
-- Clear consequences and enforcement
 
 ## 🔧 Technical Stack
 
-**Backend:**
-- Python 3.11+ with Django 4.2+
-- PostgreSQL (primary database)
-- Redis (caching layer)
-- Celery (task queue)
-
 **Frontend:**
-- HTML5, CSS3, JavaScript (ES6+)
-- Bootstrap 5 (responsive design)
-- WebSockets (real-time features)
+- React 19.2
+- TypeScript 5.8
+- Vite 6.2
+- Lucide React (icons)
 
-**Infrastructure:**
-- Docker containerization
-- Nginx reverse proxy
-- Cloud hosting (AWS/GCP ready)
-- Cloudflare CDN
+**Build Tools:**
+- Vite for fast development and optimized builds
+- TypeScript for type safety
+- ES modules for modern JavaScript
 
-## 📊 Success Metrics (Launch Phase)
+## 🚀 Getting Started
 
-**Acquisition:**
-- Target: 5,000 registered users
-- Cost Per Acquisition: <$5
-- Organic vs. Paid: 60/40 split
+### Prerequisites
 
-**Engagement:**
-- Daily Active Users: 1,000
-- Session Length: 20+ minutes average
-- DAU/MAU Ratio: 33%
+- Node.js (v18 or higher recommended)
+- npm or yarn package manager
 
-**Retention:**
-- Day 1: 50%
-- Day 7: 30%
-- Day 30: 15%
+### Installation
 
-**Monetization:**
-- Conversion Rate: 3-5%
-- ARPU: $2
-- LTV: $15-20
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.local.example .env.local
+   # Edit .env.local and add your GEMINI_API_KEY
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser to the URL shown in the terminal (typically http://localhost:5173)
+
+### Building for Production
+
+```bash
+cd frontend
+npm run build
+```
+
+The optimized production build will be in the `frontend/dist` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🎯 Roadmap
+
+### Current Features (v1.0)
+- ✅ Multi-track timeline editing
+- ✅ Audio mixing and effects
+- ✅ Video playback and preview
+- ✅ Export functionality
+- ✅ AI-powered tools
+- ✅ Project management
+
+### Planned Features (v2.0)
+- 🔄 Real-time collaboration
+- 🔄 Cloud storage integration
+- 🔄 Advanced color grading
+- 🔄 Motion tracking
+- 🔄 3D text and titles
+- 🔄 Plugin system
+
+### Future Considerations
+- Mobile app support
+- Advanced AI features
+- Team collaboration tools
+- Asset marketplace
+
+## 🎨 Component Architecture
+
+The application is built with a modular component architecture:
+
+- **Core Components**: Timeline, VideoStage, AudioMixer
+- **UI Components**: Buttons, Modals, Panels, Overlays
+- **Utility Components**: Waveform, Trimmer, ColorPicker
+- **Feature Components**: ExportQueue, ProjectManager, AITools
+
+## 📊 Performance
+
+The editor is optimized for performance with:
+- Worker pool for parallel processing
+- Waveform caching
+- Thumbnail generation
+- Lazy loading of assets
+- Efficient render optimization
 
 ## 🤝 Contributing
 
-This is currently a private development project. Contribution guidelines will be published upon public release.
+This is an active development project. Contributions are welcome!
 
 ## 📝 License
 
-Copyright © 2025 The Sacred Empire Team. All rights reserved.
+Copyright © 2025 Steed Video Editor. All rights reserved.
 
-## 🎯 Design Principles
+## 🎯 Design Philosophy
 
-1. **Depth Over Breadth:** 10 features done excellently > 100 done adequately
-2. **Respect Player Time:** Games should fit life, not vice versa
-3. **Fair Monetization:** Never sell power, build trust through cosmetics
-4. **Protect New Players:** Bottom of the funnel is the growth engine
-5. **Community First:** Browser games succeed through community, not features
+1. **Professional Quality** - Tools that match industry standards
+2. **Browser-First** - No installation required, works everywhere
+3. **AI-Enhanced** - Intelligent assistance without replacing creativity
+4. **Performance** - Smooth editing even with complex projects
+5. **User-Friendly** - Powerful features with intuitive interface
 
-## 📞 Contact
+## 📞 Support
 
-- **Development Team:** [To be added]
-- **Bug Reports:** GitHub Issues
-- **Community Discord:** [To be added]
+- **Issues**: GitHub Issues
+- **Documentation**: Coming soon
+- **Community**: [To be added]
 
 ---
 
-**Built with passion for the Prohibition era and strategic multiplayer gaming.**
+**Built for creators, powered by modern web technology.**
