@@ -1,0 +1,42 @@
+# Archive - not needed for deployment
+archive/
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Node modules (will be installed during build)
+**/node_modules
+
+# Build artifacts from local development
+**/dist
+**/build
+**/.vite
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+**/__tests__
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Documentation (optional)
+*.md
+!README.md
