@@ -2,6 +2,7 @@
 User account models for The Sacred Empire.
 """
 
+from datetime import timedelta
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
@@ -66,7 +67,7 @@ class User(AbstractUser):
 
         # Lock account after 5 failed attempts for 15 minutes
         if self.failed_login_attempts >= 5:
-            self.locked_until = timezone.now() + timezone.timedelta(minutes=15)
+            self.locked_until = timezone.now() + timedelta(minutes=15)
 
         self.save(update_fields=['failed_login_attempts', 'locked_until'])
 
@@ -86,10 +87,10 @@ class User(AbstractUser):
         self.vip_status = True
         if self.vip_expiry and self.vip_expiry > timezone.now():
             # Extend existing VIP
-            self.vip_expiry += timezone.timedelta(days=days)
+            self.vip_expiry += timedelta(days=days)
         else:
             # New VIP subscription
-            self.vip_expiry = timezone.now() + timezone.timedelta(days=days)
+            self.vip_expiry = timezone.now() + timedelta(days=days)
         self.save(update_fields=['vip_status', 'vip_expiry'])
 
     def add_points(self, amount):
