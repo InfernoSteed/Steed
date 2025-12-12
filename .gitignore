@@ -1,66 +1,79 @@
-# The Sacred Empire - Git Ignore File
-
-# Python
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual Environments
-venv/
-ENV/
-env/
-.venv
-
-# Django
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-/media
-/staticfiles
-/static
+# Steed Video Editor - Git Ignore File
 
 # Environment Variables
 .env
 .env.local
 .env.*.local
 
+# Node & NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# Vite
+.vite/
+vite.config.*.timestamp-*
+
 # IDE
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Testing
 .coverage
+coverage/
 .pytest_cache/
 htmlcov/
 .tox/
 .nox/
 
-# Database
-*.dump
-*.sql.gz
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Cache
+__pycache__/
+*.pyc
+.cache/
+.parcel-cache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Backup files
+*.bak
+*.backup
 
 # Secrets
 secrets/
@@ -68,22 +81,26 @@ secrets/
 *.key
 *.crt
 
-# Logs
-logs/
-*.log
+# Media files (large video/audio for testing)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+!public/**/*.mp4
+!public/**/*.mp3
 
-# Cache
-__pycache__/
-*.pyc
+# Python (for archive)
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+db.sqlite3
 
 # Docker
 docker-compose.override.yml
-
-# Node (if using frontend build tools)
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Backup files
-*.bak
-*.backup
